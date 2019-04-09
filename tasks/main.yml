@@ -1,0 +1,15 @@
+---
+- name: Install postfix.
+  package:
+    name: "postfix"
+    state: "present"
+
+- name: Set MailHog as relayhost.
+  command: "postconf -e relayhost=localhost:1025"
+  notify: restart postfix
+
+- name: Enable and start postfix service.
+  service:
+    name: postfix
+    enabled: yes
+    state: started

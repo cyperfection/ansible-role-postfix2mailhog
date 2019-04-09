@@ -1,0 +1,27 @@
+---
+dependencies:
+  - geerlingguy.mailhog
+
+galaxy_info:
+  author: Pascal Pilz
+  role_name: postfix2mailhog
+  description: Setup postfix to relay mails to MailHog
+  company: "cyperfection GmbH"
+  license: CC-BY
+  min_ansible_version: 2.4
+  platforms:
+    - name: EL
+      versions:
+        - 6
+        - 7
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+
+  galaxy_tags:
+    - smtp
+    - postfix
+    - mailhog
